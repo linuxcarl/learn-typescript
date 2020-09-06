@@ -11,7 +11,7 @@ enum PhotoOrientation {
 
 //SUPER clase
 abstract class Item {
-    protected _id: number;
+    protected readonly _id: number;
     protected _title: string;
 
     constructor(id: number, title: string){
@@ -21,13 +21,15 @@ abstract class Item {
     get id(): number {
         return this._id;
     }
+    /*
     set id(id: number): void {
         this._id = id;
     }
+    */
     get title(): string {
         return this._title;
     }
-    set title(title: string): void {
+    set title(title: string) {
         this._title = title;
     }
 }
@@ -46,7 +48,7 @@ class Picture extends Item {
     get orientation(): PhotoOrientation {
         return this.#_orientation;
     }
-    set orientation(orientation: PhotoOrientation): void {
+    set orientation(orientation: PhotoOrientation) {
         this.#_orientation = orientation;
     }
     // Comportamiento
@@ -90,7 +92,7 @@ console.log('##############.: picture  change id and title :.##############');
 console.log('picture old id', picture.id); // get id()
 console.log('picture old titile', picture.title); // get id()
 console.log('picture CLASS', picture);  
-picture.id = 100; // # set id(100);
+//picture.id = 100; // # set id(100);
 picture.title = 'Another title'; // #album.title = 'Personal Activities'; //#console.log('album', album);
 console.log('Picture new id=>', picture.id);
 console.log('Picture new title=>', picture.title);
