@@ -37,6 +37,7 @@ abstract class Item {
 // get y set
 class Picture extends Item {
     // Propiedades
+    public static  photoOrientation = PhotoOrientation;
     #_orientation: PhotoOrientation;
 
     public constructor(id: number, 
@@ -97,7 +98,8 @@ picture.title = 'Another title'; // #album.title = 'Personal Activities'; //#con
 console.log('Picture new id=>', picture.id);
 console.log('Picture new title=>', picture.title);
 console.log('picture NEW CLASS', picture);  
-
+console.log('##############.: picture use static propierty :.##############');
+console.log('static propierty', Picture.photoOrientation.Square);
 //la clase abstract no debe permitir lo siguiente
 //const item = new Item(1, 'tedt');
 //console.log(item);
