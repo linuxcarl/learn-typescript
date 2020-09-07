@@ -1,9 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var photo_app_1 = require("./photo-app");
-var user = new photo_app_1.User(1, "Carlos", "Carlos Ramirez", true);
-var album = new photo_app_1.Album(1, "Introducción a la programación aritentada a objetos");
-var picture = new photo_app_1.Picture(3, "POO", photo_app_1.PhotoOrientation.Landscape);
+const album_1 = require("./class/album");
+const photo_orientation_1 = require("./class/photo-orientation");
+const picture_1 = require("./class/picture");
+const user_1 = require("./class/user");
+const user = new user_1.User(1, "Carlos", "Carlos Ramirez", true);
+const album = new album_1.Album(1, "Introducción a la programación aritentada a objetos");
+const picture = new picture_1.Picture(3, "POO", photo_orientation_1.PhotoOrientation.Landscape);
 //Creamos las relaciones
 user.addAlbum(album);
 album.addPicture(picture);

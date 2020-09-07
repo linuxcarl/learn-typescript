@@ -1,4 +1,7 @@
-import { Album, PhotoOrientation, Picture, User } from "./photo-app";
+import { Album } from "./class/album";
+import { PhotoOrientation } from "./class/photo-orientation";
+import { Picture } from "./class/picture";
+import { User } from "./class/user";
 
 const user = new User(1, "Carlos", "Carlos Ramirez", true);
 const album = new Album(1,"Introducción a la programación aritentada a objetos");
